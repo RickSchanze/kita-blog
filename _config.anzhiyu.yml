@@ -425,7 +425,7 @@ crisp:
 footer:
   owner:
     enable: true
-    since: 2020
+    since: 2026
   custom_text:
   runtime:
     enable: false
@@ -858,7 +858,7 @@ busuanzi:
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
   enable: true
-  publish_date: 4/1/2021 00:00:00
+  publish_date: 9/19/2026 00:00:00
 
 # Console - Newest Comments
 newest_comments:
@@ -1050,20 +1050,20 @@ home_top:
   timemode: date #date/updated
   title: 生活明朗
   subTitle: 万物可爱。
-  siteText: anheyu.com
+  siteText: Kita's Blog
   category:
-    - name: 前端
-      path: /categories/前端开发/
+    - name: 编程
+      path: /categories/编程/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
-    - name: 大学
-      path: /categories/大学生涯/
+    - name: 随笔
+      path: /categories/随笔/
       shadow: var(--anzhiyu-shadow-red)
       class: red
       icon: anzhiyu-icon-fire
     - name: 生活
-      path: /categories/生活日常/
+      path: /categories/生活/
       shadow: var(--anzhiyu-shadow-green)
       class: green
       icon: anzhiyu-icon-book
@@ -1073,10 +1073,10 @@ home_top:
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
-    tips: 新品主题
-    title: Theme-AnZhiYu
+    tips: 欢迎光临
+    title: Kita's Blog
     image: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
-    link: https://docs.anheyu.com/
+    link: /archives/
 
 # 朋友圈配置
 friends_vue:
