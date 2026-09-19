@@ -142,3 +142,12 @@ cover: /images/posts/srp/SRPIntroduction/cover.png
 ```
 
 `.Edit.md` 已通过 Hexo 的 `ignore` 配置排除，不会生成重复页面。
+
+## 文档编写规范
+
+### 代码块语言
+
+- 围栏代码块应优先填写准确的语言标记，例如 `csharp`、`hlsl`、`yaml`、`powershell` 或 `markdown`。
+- 不要因为不确定语言就统一写成 `plaintext`；应先确认代码实际使用的语言。
+- `plaintext` 只用于确实没有语法结构、但仍需要以代码块展示的纯文本，例如终端输出、日志或固定格式的数据。
+- 普通说明、单个路径和短命令优先使用正文或内联代码，不要为了排版额外创建 `plaintext` 代码块。

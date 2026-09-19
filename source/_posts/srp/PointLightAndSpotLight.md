@@ -1,8 +1,11 @@
 ---
 title: 点光源和聚光灯
 date: 2026-09-19 18:58:47
-categories:
+categories: SRP
 tags:
+  - Unity
+  - SRP
+  - 渲染
 description:
 cover: cover.png
 mathjax: true
