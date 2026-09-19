@@ -1,32 +1,32 @@
 ---
-title: Hello World
+title: 欢迎来到喜多喜多的博客
 date: 2026-09-19 12:00:00
+updated: 2026-09-19 12:00:00
+categories:
+  - 生活
 tags:
+  - 博客
+  - 随笔
+description: 这里记录技术探索、日常思考，以及把一个想法慢慢做成作品的过程。
+cover: /imgs/QQ头像.jpg
+top: true
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+你好，欢迎来到喜多喜多的博客。
 
-### Create a new post
+这个小站会记录三类内容：编程与工具的实践笔记、学习过程中形成的方法，以及生活里值得留下来的小事。很多问题在解决之后看起来很简单，但真正有价值的，往往是中间走过的弯路和做出选择的理由。
 
-``` bash
-$ hexo new "My New Post"
-```
+## 为什么写博客
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+写作是一种整理。把零散经验写成别人能读懂的文章，会迫使自己重新检查每一个结论：它为什么成立，有没有适用边界，还能不能用更清楚的方式表达。
 
-### Run server
+这里不会只追求“正确答案”，也会尽量保存探索过程。希望这些记录既能帮助未来的自己，也能给偶然来到这里的你一点启发。
 
-``` bash
-$ hexo server
-```
+## 接下来会更新什么
 
-More info: [Server](https://hexo.io/docs/server.html)
+- Hexo 与安知鱼主题的搭建、配置和部署
+- 编程项目中的问题定位与解决过程
+- 好用的软件、工作流和效率工具
+- 阅读、学习和生活随想
 
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
+愿我们都能保持好奇，持续创造。

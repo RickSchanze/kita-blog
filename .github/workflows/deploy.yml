@@ -23,7 +23,12 @@ jobs:
         run: npm ci
 
       - name: Generate static files
-        run: npx hexo generate
+        run: |
+          npx hexo clean
+          npx hexo generate
+
+      - name: Verify build output
+        run: test -f public/index.html
 
       # 通过 SSH 私钥 + rsync 把构建产物同步到自己的服务器
       - name: Setup SSH key

@@ -2,8 +2,9 @@
 Thumbs.db
 db.json
 *.log
+__pycache__/
+*.pyc
 node_modules/
 public/
 .deploy*/
-.deploy_git/
-.workbuddy/
+_multiconfig.yml
