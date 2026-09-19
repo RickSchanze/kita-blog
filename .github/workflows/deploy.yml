@@ -1,0 +1,42 @@
+name: Build and Deploy to Server
+
+# 推送到 main 分支时触发，也支持在 Actions 页面手动触发
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate static files
+        run: npx hexo generate
+
+      # 通过 SSH 私钥 + rsync 把构建产物同步到自己的服务器
+      - name: Setup SSH key
+        env:
+          SSH_PORT: ${{ vars.SERVER_PORT || 22 }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SERVER_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p "${SSH_PORT}" -H "${{ secrets.SERVER_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Deploy to server via rsync
+        run: |
+          rsync -avz --delete \
+            -e "ssh -p ${{ vars.SERVER_PORT || 22 }} -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes" \
+            public/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_DEPLOY_PATH }}/
