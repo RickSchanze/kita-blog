@@ -12,7 +12,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## 部署到自己服务器后，把 url 改成你的域名
-url: https://your-domain.com
+url: http://124.221.90.117
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
