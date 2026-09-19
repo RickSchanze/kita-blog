@@ -1235,7 +1235,7 @@ dynamicEffect:
 inject:
   head:
     # 自定义css
-    # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/custom.css">
 
   bottom:
     # 自定义js
@@ -1285,7 +1285,8 @@ CDN:
     # waline_css:
     # sharejs:
     # sharejs_css:
-    # mathjax:
+    # 主题的初始化模板基于 MathJax 3；覆盖插件清单中错误的 v4 /es5 地址。
+    mathjax: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     # katex:
     # katex_copytex:
     # mermaid:

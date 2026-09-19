@@ -1,0 +1,11 @@
+/* Softer inline-code styling. Fenced code blocks remain unchanged. */
+#article-container :not(pre) > code {
+  margin: 0 0.12em;
+  padding: 0.12em 0.35em;
+  border: 1px solid rgba(127, 127, 127, 0.18);
+  border-radius: 4px;
+  background: rgba(127, 127, 127, 0.1);
+  box-shadow: none;
+  color: var(--font-color);
+  line-height: 1.5;
+}

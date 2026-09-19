@@ -4,7 +4,8 @@ date: 2026-09-19 18:58:47
 categories:
 tags:
 description:
-cover: /images/posts/SRP/PointLightAndSpotLight/cover.png
+cover: /images/posts/srp/PointLightAndSpotLight/cover.png
+mathjax: true
 typora-root-url: ../..
 typora-copy-images-to: ../../images/posts/SRP/PointLightAndSpotLight
 ---
@@ -13,7 +14,7 @@ typora-copy-images-to: ../../images/posts/SRP/PointLightAndSpotLight
 
 ## 点光源
 
-![Unity里的点光源](/images/posts/SRP/PointLightAndSpotLight/image-20260919190336506.png)
+![Unity里的点光源](/images/posts/srp/PointLightAndSpotLight/image-20260919190336506.png)
 
 Unity里，点光源会有一个range参数
 
@@ -63,13 +64,13 @@ CPU 不需要把 `range` 本身交给 GPU，可以预先计算 $\frac{1}{range^2
 
 ## 聚光灯
 
-![Unity里的聚光灯](/images/posts/SRP/PointLightAndSpotLight/image-20260919190707444.png)
+![Unity里的聚光灯](/images/posts/srp/PointLightAndSpotLight/image-20260919190707444.png)
 
 聚光灯是一个锥形的光照范围，我们想做到的效果是在边缘不是生硬的直接从要光照变成纯黑，而是要一个过渡，因此我们要内锥角和外锥角的概念。我们先暂定内锥角为外锥角的80%。
 
 设外锥角为 $\alpha$，内锥角为 $\beta$。如果没有单独提供内锥角，也可以暂定 $\beta=0.8\alpha$。
 
-![image-20260919191516388](/../../../../AppData/Roaming/Typora/typora-user-images/image-20260919191516388.png)
+![聚光灯内锥角和外锥角示意图](/images/posts/srp/PointLightAndSpotLight/image-20260919192156493.png)
 
 假设片元所在位置和锥中线的夹角为 $\theta$。当 $\theta<\frac{\beta}{2}$ 时，片元位于内锥中，角度衰减为 $1$；当 $\theta>\frac{\alpha}{2}$ 时，片元位于外锥之外，角度衰减为 $0$；内外锥之间则进行平滑过渡：
 
